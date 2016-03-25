@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Chait Test App</name>
+
+    <description>
+        An example for phonegap build docs. 
+    </description>
+
+    <author email="chaitugoli@gmail.com">
+        Chait Goli
+    </author>
+    <icon src="bolt.png" platform="android" qualifier="ldpi" />
+    <icon src="bolt.png" platform="android" qualifier="mdpi" />
+    <icon src="bolt.png" platform="android" qualifier="hdpi" />
+    <icon src="bolt.png" platform="android" qualifier="xhdpi" />
+    <icon src="bolt.png" platform="android" qualifier="xxhdpi" />
+    <icon src="bolt.png" platform="android" qualifier="fr-xxhdpi" />
+
+    <splash src="bolt.png" />
+
+</widget>
