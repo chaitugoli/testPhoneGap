@@ -35,13 +35,13 @@ define([
                 $headLinkTag[1].attributes.href.value = 'css/all_dark.css';
                 $rootScope.themeColors = ["#727272", "#393939"];
                 $boltNavBar.removeClass( "navbar-default").addClass("navbar-inverse");
-                $rootScope.pointClickImg = "../images/click_load_dark.gif";
+                $rootScope.pointClickImg = "click_load_dark.gif";
             }
             else{
                 $headLinkTag[1].attributes.href.value = 'css/all_light.css';
                 $rootScope.themeColors = ["#fff", "#e4f4f4"];
                 $boltNavBar.removeClass( "navbar-inverse").addClass("navbar-default");
-                $rootScope.pointClickImg = "../images/click_load.gif";
+                $rootScope.pointClickImg = "click_load.gif";
             }
             $rootScope.$broadcast('themeChange');
         });
