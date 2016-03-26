@@ -1,0 +1,19 @@
+{
+  "name": "ttdiag-bolt",
+  "version": "0.1",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "libs"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "angular-ui-router": "latest",
+    "requirejs": "latest",
+    "requirejs-domready": "latest",
+    "angular-bootstrap": "latest",
+    "d3":"latest",
+    "jquery":"latest",
+    "underscore":"latest"
+  }
+}

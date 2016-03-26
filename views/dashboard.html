@@ -1,0 +1,39 @@
+<div id="page-wrapper">
+    <div class="animeTest"></div>
+    <div id="betaBanner"><span><i class="fa fa-exclamation-triangle" style="margin-right: 5px;"></i>This site is in BETA. Real time data may not be available at all times</span></div>
+    <div class="row" >
+        <div class="col-lg-6" ng-repeat="datacenter in datacenters" style="margin-top:10px">
+            <div ng-class="alertClass">
+                <div class="panel-heading">
+                    <i class="fa fa-bar-chart-o fa-fw"></i> {{datacenter.name}}
+                    <button class="btn playPause" ng-click="toggleLiveGraph()">
+                        <i ng-class="toggleIcon"></i>
+                    </button>
+                </div>
+                <div class="panel-body">
+                    <div id="{{datacenter.aggregation_name}}-live-chart" style="height:300px;cursor:crosshair">
+                        <h3 id="graphLoader" align="center"><img src="../images/graph-loader.gif" height="200px" style="margin-top: 5%" ></h3>
+                        <live-Linechart graphdiv="{{datacenter.aggregation_name}}-live-chart"
+                                        graphid="{{datacenter.id}}" vlanid="{{datacenter.vlan_id}}"
+                                        graphlegend="{{datacenter.aggregation_name}}-legend"></live-Linechart>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                  <div class="panel-body">
+                     <div class="legend" style="display:inline-flex">
+                        <input type="checkbox" ng-click="legendToggle()" ng-model="allCheck">
+                        <span class="allCheck"> All </span>
+                        <div id="{{datacenter.aggregation_name}}-legend">
+                            <div ng-repeat="vlan in datacenter.vlan_id" class="legendBox" ng-click="legendToggle()" data-series="{{vlan}}">
+                                <input type="checkbox" data-series="{{vlan}}" ng-checked="allCheck">
+                                <div class="legendDot" style="background-color:{{colors[vlan.id-1]}};"></div>
+                                <span data-series="{{vlan}}">{{vlan.label}}</span>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

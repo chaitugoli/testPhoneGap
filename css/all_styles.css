@@ -1,0 +1,49 @@
+@import '../lib/bootstrap/dist/css/bootstrap.min.css';
+@import '../lib/font-awesome/css/font-awesome.min.css';
+@import '../lib/noUiSlider/nouislider.css';
+@import '../lib/angularSwitch/css/angular-toggle-switch-bootstrap-3.css';
+#navbar-links{
+    margin-top: 0.2%;
+    margin-left: 10%;
+}
+
+.timeMargin {
+    margin-left: -4%;
+}
+.timeLabel {
+    width: 26%;
+    margin-top: 2%;
+}
+.timeRow {
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+.legendBox {
+    margin-right: 5px;
+    padding: 4px;
+    border-radius: 10px;
+    display: inline;
+}
+.legendDot{
+    display:inline-block;
+    border-radius:5px;
+    width:10px;
+    height:10px;
+}
+.rangeSlider {
+    margin-bottom: 10px;
+    width: 90%;
+    margin-left: 7%;
+    margin-top: 2%;
+}
+.legend input{
+    font-size: x-large;
+}
+#betaBanner{
+    width: 100%;
+    text-align: center;
+    margin-top: 7px;
+    font-size: 17px;
+    background-color: #f0ad4e;
+    color: black;
+}

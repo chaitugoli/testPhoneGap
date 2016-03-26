@@ -1,0 +1,31 @@
+<div id="pointClickPanel" class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-bar-chart-o fa-fw"></i> Bandwidth Stats - <label class="clickLabel">{{pointClickLabel}}</label> at {{pointClickTime}}
+        <i class="fa fa-times" style="float: right;cursor: pointer;" ng-click="closeClickInfo()"></i>
+    </div>
+    <div class="panel-body" id="sessionsList" style="overflow: auto;height: 90%">
+        <div>
+            <Label class="clickLabel">Total Sessions : {{sessions.length}}</Label>
+            <Label class="clickLabel" style="float: right;">Total Bandwidth : {{pointClickTotalBw}}</Label>
+            <h3 ng-if="sessions.length == 0" id="pointClickLoad" align="center"><img id="pointClickImg" ng-src="{{pointClickImg}}"></h3>
+            <ul class="list-group" >
+                <li ng-repeat="session in sessions | limitTo: listSize" class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-6"><span>{{session.name}}</span></div>
+                        <div class="col-md-6">
+                            <div class="col-md-5">
+                                 <span>{{session.bandwidth_name}}</span>
+                            </div>
+                            <div class="col-md-7 pointClickProgressBar">
+                                <div class="progress" style="margin-bottom: 0px">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" style="width:{{session.bandwidth_progress}}%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

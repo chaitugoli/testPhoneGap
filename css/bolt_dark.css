@@ -1,0 +1,309 @@
+
+html,body {
+    background-color: rgb(65, 64, 64);
+}
+
+#wrapper {
+    background-color: rgb(65, 64, 64);
+}
+
+#sessionsList::-webkit-scrollbar {
+    width: 1em;
+}
+
+#sessionsList::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+#sessionsList::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+#page-wrapper {
+    padding: 0 15px;
+
+}
+
+.navbar {
+    min-height: 20px;
+}
+.navbar-brand {
+    float: left;
+    height: 32px;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 15px;
+}
+.panel-yellow a:hover {
+    color: #df8a13;
+}
+.btn {
+    padding: 2px 10px;
+}
+.btn-navlink {
+  color: #C5C2C2;
+  background-color: #222222;
+  border-color: #222222;
+}
+
+.btn-navlink:hover,
+.btn-navlink:focus,
+.btn-navlink:active,
+.btn-navlink.active,
+.open .dropdown-toggle.btn-navlink {
+    color: #EDEDED;
+    background-color: #222222;
+    border-color: #222222;
+    border-bottom: 3px #ee8800 solid;
+}
+
+.btn-navlink:active,
+.btn-navlink.active,
+.open .dropdown-toggle.btn-navlink {
+  background-image: none;
+}
+
+.btn-navlink.disabled,
+.btn-navlink[disabled],
+fieldset[disabled] .btn-navlink,
+.btn-navlink.disabled:hover,
+.btn-navlink[disabled]:hover,
+fieldset[disabled] .btn-navlink:hover,
+.btn-navlink.disabled:focus,
+.btn-navlink[disabled]:focus,
+fieldset[disabled] .btn-navlink:focus,
+.btn-navlink.disabled:active,
+.btn-navlink[disabled]:active,
+fieldset[disabled] .btn-navlink:active,
+.btn-navlink.disabled.active,
+.btn-navlink[disabled].active,
+fieldset[disabled] .btn-navlink.active {
+  background-color: #222222;
+  border-color: #222222;
+}
+
+.btn-navlink .badge {
+  color: #222222;
+  background-color: #EDEDED;
+}
+
+
+.allCheck {
+    color:#C5C2C2;
+    margin-left: 5px;
+    margin-right: 5px
+}
+.legendLabel{
+    color: #C5C2C2;
+    padding-right: 5px;
+}
+#pointClickPanel {
+    width: 45%;
+    height:85%;
+    position: fixed;
+    z-index: 100;
+    top:8%;
+    left: 0;
+    display: none;
+    border-radius: 5px;
+}
+.panel {
+    margin-bottom: 10px;
+}
+#pointClickLoad{
+    margin-top: 25%;
+}
+#graphLoader {
+    position: absolute;
+    left: 40%;
+}
+#pointClickImg{
+    height: 150px;
+}
+.pointClickProgressBar {
+    padding-left: 0;
+    margin-left: -2%;
+}
+.panel-body {
+    background-color: #222222;
+    color: #C5C2C2;
+}
+.panel-default>.panel-heading {
+    color: #C5C2C2;
+    background-color: #353535;
+    border-color: #404040;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.tickLabel{
+    color: #C5C2C2;
+ }
+
+.panel-default {
+    border-color: #4F4F4F;
+}
+#sessionsList li{
+    background-color: #222222;
+    color: #C5C2C2;
+}
+.list-group-item{
+    border: 1px solid #4F4F4F;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000;
+    background-color: #C1C1C1;
+    border: 1px solid #4F4F4F;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #C5C2C2;
+    text-align: center;
+    background-color: #353535;
+    border: 1px solid #4F4F4F;
+    border-radius: 4px;
+}
+.btn-default {
+    color: #333;
+    background-color: #C2C0C0;
+    border-color: #4f4f4f;
+}
+.panel {
+    margin-bottom: 5px;
+    background-color: #222;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.noUi-handle {
+    border: 1px solid #7F7E7E;
+    border-radius: 4px;
+    background: #414141;
+    cursor: default;
+    /* box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #8E8B8B, 0 3px 6px -3px #BBB; */
+}
+.playPause {
+    float: right;
+    background-color: #AAA7A7;
+    margin-top: -0.1%;
+    color: black;
+    outline: none
+}
+.detailLabel {
+    margin-top: 1%;
+    color:#C5C2C2
+}
+.clickLabel{
+    color: #C5C2C2;
+}
+.noUi-tooltip{
+    color: #C5C2C2;
+    width: 75px;
+    height: 28px;
+    padding: 3px;
+    text-align: center;
+    background-color: rgba(115, 115, 115, 0.41);
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    position: absolute;
+    top: -30px;
+    left: -25px;
+}
+.noUi-connect {
+    background: #505050;
+    box-shadow: inset 0 0 3px rgba(51,51,51,0.45);
+    -webkit-transition: background 450ms;
+    transition: background 450ms;
+    cursor: move;
+}
+.noUi-horizontal {
+    height: 12px;
+}
+.noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 20px;
+    left: -17px;
+    top: -6px;
+    cursor: pointer;
+}
+.noUi-handle:before,
+.noUi-handle:after {
+    /* content: ""; */
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 1px;
+    background: #E8E7E6;
+    left: 14px;
+    top: 5px;
+    margin-left: -7px;
+
+}
+.noUi-handle:after {
+    left: 17px;
+}
+.noUi-background {
+    background: #A9A7A7;
+    box-shadow: inset 0 1px 1px #CCC9C9;
+}
+.progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #333333;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.progress-bar-info {
+    background-color: #006C8C;
+}
+.animeTest {
+    animation: pulse 2s infinite;
+    animation-direction: alternate;
+}
+@keyframes pulse {
+  0% {
+    background-color: #222;
+    color: #C5C2C2;
+  }
+  100% {
+    background-color: #f0ad4e;
+    color: black;
+  }
+}
+.legendAlert {
+    color: #f0ad4e;
+    font-weight: bold;
+}

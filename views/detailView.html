@@ -1,0 +1,72 @@
+<div id="page-wrapper" class="detail_view">
+    <div class="row timeRow">
+        <div class="col-md-4">
+            <div class="row">
+                 <div class="form-group">
+                    <label class="col-md-1 detailLabel">Start</label>
+                    <div class="col-md-5">
+                         <div class='input-group date startDatePicker'>
+                            <input type='text' class="form-control" id="startDatePicker"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 timeMargin">
+                        <div class='input-group bootstrap-timepicker timepicker'>
+                            <input type='text' id='startTimePicker' class="form-control" ng-model="startTime"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 timeMargin">
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-md-1 detailLabel">End</label>
+                    <div class="col-md-5">
+                        <div class='input-group date endDatePicker'>
+                            <input type='text' class="form-control" id="endDatePicker"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 timeMargin">
+                        <div class='input-group bootstrap-timepicker timepicker'>
+                            <input type='text' id='endTimePicker' class="form-control" ng-model="endTime" name="end_date_time" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 timeMargin" style="margin-top: 4px;">
+            <button ng-click="getHistoricGraph()" class="btn btn-default">Get Data</button>
+        </div>
+    </div>
+    <span style="color: red">{{timeErr}}</span>
+    <div class="row">
+        <div ng-repeat="connection in connections track by $index">
+            <div ng-class="getClass($index, connection)">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> {{connection.label}}
+                    </div>
+                    <div class="panel-body">
+                        <h3 id="graphLoader" align="center"><img src="../images/graph-loader.gif" height="200px" style="margin-top: 5%" ></h3>
+                        <div id="{{connection.graph}}-historic-chart" style="height:300px;cursor: crosshair;">
+                            <historic-Linechart graphdiv="{{connection.graph}}-historic-chart" graphseries="{{connection.graph}}" graphid="{{connection.id}}"></historic-Linechart>
+                        </div>
+                    </div>
+                    <div class="rangeSlider" id="{{connection.graph}}-rangeSlider" ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

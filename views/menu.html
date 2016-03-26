@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default navbar-static-top" id="boltNavbar" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="dashboard">TTDIAG - <i class="fa fa-bolt"></i> BOLT</a>
+    </div>
+    <div id="navbar-links">
+        <div class="btn-group adminButtons" data-toggle="buttons">
+            <label ng-click="stateGo('dashboard')" class="btn btn-navlink active">
+                <input type="radio"> Dashboard
+            </label>
+            <label ng-repeat="datacenter in datacenters" ng-click="stateGo(''+datacenter.name)" class="btn btn-navlink">
+                <input type="radio"> {{datacenter.name}}
+            </label>
+        </div>
+        <div style="float:right;margin-right:1%;margin-top: 3px" toggle-switch class="switch-mini switch-dark" ng-model="boltTheme" knob-label="Theme" on-label="Dark" off-label="Light"></div>
+    </div>
+</nav>

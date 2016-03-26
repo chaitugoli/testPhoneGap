@@ -1,21 +1,25 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css" />
-		<link rel="stylesheet" type="text/css" href="css/style4.css" />
-	</head>
-	<body>
-		<div class="container">
-			<nav id="bt-menu" class="bt-menu">
-				<a  class="bt-menu-trigger"></a>
-				<ul>
-					<li><a class="fa fa-line-chart">Search</a></li>
-					<li><a class="fa fa-bar-chart">Compose</a></li>
-					<li><a class="fa fa-pie-chart">Profile</a></li>
-				</ul>
-			</nav>
-		</div><!-- /container -->
-	</body>
-	<script src="js/borderMenu.js"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TTDIAG - BOLT </title>
+    <link rel="icon" href="images/ttlogo.png">
+    <link href="css/all_styles.css?beta" rel="stylesheet">
+    <link href="css/all_light.css" rel="stylesheet">
+    <script>
+      var version_number = 'BETA';
+      var require = {
+          urlArgs: ''+version_number
+      };
+    </script>
+  </head>
+  <body>
+        <div id="wrapper">
+          <div ui-view="menu"></div>
+          <div ui-view="dashboard" style="height:100%"></div>
+          <div ui-view="pointClickView"></div>
+        </div>
+    <script src="lib/requirejs/require.js" data-main="js/main.js"></script>
+    <script src="js/vlan_config.js"></script>
+  </body>
 </html>

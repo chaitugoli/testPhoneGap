@@ -1,0 +1,70 @@
+<div id="customDashboard" tabindex="1" style="outline: none">
+    <div id="page-wrapper">
+        <nav id="bt-menu" class="bt-menu">
+            <a class="bt-menu-trigger fa fa-line-chart"></a>
+            <ul>
+                <li><a ng-click="openPanel()" class="fa fa-line-chart">Line Chart</a></li>
+                <li><a class="fa fa-bar-chart">Bar Chart</a></li>
+                <li><a class="fa fa-pie-chart">Pie Chart</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="graphSettings" class="panel panel-default">
+        <div class="panel-heading">
+            <label>Add Line Graph</label>
+            <i class="fa fa-times" style="float: right;cursor: pointer;" ng-click="closeSettings()"></i>
+        </div>
+        <div class="panel-body" id="graphOptions">
+            <div ng-repeat="widget in graphWidget track by widget.id">
+                <div class="row" >
+                     <div class="form-group">
+                        <div class="col-md-3">
+                            <label class="col-md-2">Name</label>
+                            <div class="col-md-7">
+                                <input type='text' class="form-control" ng-model="widget.name"/>
+                            </div>
+                        </div>
+                        <div class="col-md-3" style="left: -5%;">
+                            <label class="col-md-2">Data Center</label>
+                            <div class="col-md-7">
+                               <select ng-options="datacenter as datacenter.aggregation_name for datacenter in datacenters" class="form-control col-md-11" ng-model="widget.dc"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group" ng-repeat="series in widget.series">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-md-3">Series Name</label>
+                                <div class="col-md-8">
+                                    <input type='text' class="form-control" ng-model="series.name"/>
+                                </div>
+                                <button class="col-md-1 btn btn-primary fa fa-plus" ng-if="$last" style="margin-top: 2.5%;padding:2px 5px;outline: none;" ng-click="addSeries($event)">
+
+                                </button>
+                            </div>
+                            <div class="col-md-1">
+                                <label style="margin-top: 10%;">Vlan ID</label>
+                            </div>
+                            <div class="col-lg-7" style="left:-2%">
+                                <div class="col-md-6" ng-repeat="vlanId in series.vlanId" style="width: 45%;padding: 0px;">
+                                    <div class="col-md-5">
+                                        <input type='text' class="form-control" ng-model="vlanId[0]"/>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <span style="left: -3%;position: absolute;top: 15%;">-</span>
+                                        <input type='text' class="form-control" ng-model="vlanId[1]"/>
+                                    </div>
+                                    <span ng-if="!$last" style="position: absolute;top:50%;">,</span>
+                                    <button class="btn btn-primary fa fa-plus" ng-if="$last" style="margin-top: 2.5%;outline: none;" data-series="{{series.id}}" ng-click="addVlanId($event)"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" ng-click="createGraphWidget()">Save</button>
+        </div>
+    </div>
+</div>

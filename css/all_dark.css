@@ -1,0 +1,21 @@
+@import '../lib/datetimepicker/css/datePicker_dark.css';
+@import '../lib/datetimepicker/css/timePicker_dark.css';
+@import 'bolt_dark.css';
+
+.ats-switch .knob {
+    border-left: 1px solid #9F9F9F;
+    border-right: 1px solid #9F9F9F;
+    border-bottom: 0;
+    background-color: #f5f5f5;
+    margin-top: 0;
+    margin-bottom: 0;
+    z-index: 100;
+}
+.ats-switch {
+    border: 1px solid #ededed;
+    outline: none;
+}
+.dropdown-menu {
+    background-color: #222;
+    border-radius: 10px;
+}
