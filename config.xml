@@ -34,14 +34,50 @@
     <icon src="bolt.png" platform="android" qualifier="xhdpi" />
     <icon src="bolt.png" platform="android" qualifier="xxhdpi" />
     <icon src="bolt.png" platform="android" qualifier="fr-xxhdpi" />
-    
-    <preference name="SplashScreen" value="screen"/>
-    <splash src="splash.png" platform="android" qualifier="ldpi" />
-    <splash src="splash.png" platform="android" qualifier="mdpi" />
-    <splash src="splash.png" platform="android" qualifier="hdpi" />
-    <splash src="splash.png" platform="android" qualifier="xhdpi" />
-    <splash src="splash.png" platform="android" qualifier="fr-xhdpi" />
-    <splash src="splash.png" platform="android" qualifier="port-xxhdpi" />
-    <splash src="splash.png" platform="android" qualifier="land-xxhdpi" />
 
+    <preference
+    name="SplashScreen"
+    value="screen" />
+    <preference
+        name="AutoHideSplashScreen"
+        value="true" />
+    <preference
+        name="SplashScreenDelay"
+        value="5000" />
+
+    <feature name="SplashScreen" >
+        <param
+            name="android-package"
+            value="org.apache.cordova.splashscreen.SplashScreen" />
+
+        <param
+            name="onload"
+            value="true" />
+    </feature>
+    <platform name="android">
+        <splash
+            density="land-hdpi"
+            src="res/drawable-land-hdpi/splash.png" />
+        <splash
+            density="land-ldpi"
+            src="res/drawable-land-ldpi/splash.png" />
+        <splash
+            density="land-mdpi"
+            src="res/drawable-land-mdpi/splash.png" />
+        <splash
+            density="land-xhdpi"
+            src="res/drawable-land-xhdpi/splash.png" />
+        <splash
+            density="port-hdpi"
+            src="res/drawable-hdpi/splash.png" />
+        <splash
+            density="port-ldpi"
+            src="res/drawable-ldpi/splash.png" />
+        <splash
+            density="port-mdpi"
+            src="res/drawable-mdpi/splash.png" />
+        <splash
+            density="port-xhdpi"
+            src="res/drawable-xhdpi/splash.png" />
+    </platform>
 </widget>
