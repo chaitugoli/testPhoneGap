@@ -4,7 +4,7 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Chait Test App</name>
+    <name>BOLT</name>
 
     <description>
         An example for phonegap build docs. 
@@ -20,6 +20,12 @@
     <icon src="bolt.png" platform="android" qualifier="xxhdpi" />
     <icon src="bolt.png" platform="android" qualifier="fr-xxhdpi" />
 
-    <splash src="bolt.png" />
+    <splash src="splash.png" platform="android" qualifier="ldpi" />
+    <splash src="splash.png" platform="android" qualifier="mdpi" />
+    <splash src="splash.png" platform="android" qualifier="hdpi" />
+    <splash src="splash.png" platform="android" qualifier="xhdpi" />
+    <splash src="splash.png" platform="android" qualifier="fr-xhdpi" />
+    <splash src="splash.png" platform="android" qualifier="port-xxhdpi" />
+    <splash src="splash.png" platform="android" qualifier="land-xxhdpi" />
 
 </widget>
